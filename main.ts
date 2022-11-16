@@ -42,7 +42,7 @@ basic.forever(function () {
     }
     Éteindre()
     if (Piéton == 1) {
-        Piéton += -1
+        Piéton += 1
         for (let index = 0; index < 100; index++) {
             Del_blanche()
             basic.pause(25)
@@ -52,14 +52,15 @@ basic.forever(function () {
         Éteindre()
         for (let index = 0; index < 10; index++) {
             Del_orange()
-            basic.pause(125)
+            basic.pause(175)
             Rouge()
-            basic.pause(125)
+            basic.pause(175)
             Éteindre()
             Rouge()
             basic.pause(150)
         }
         Éteindre()
+        Piéton += -2
     } else {
         for (let index = 0; index < 100; index++) {
             Rouge()
@@ -68,5 +69,36 @@ basic.forever(function () {
             basic.pause(50)
         }
         Éteindre()
+    }
+})
+basic.forever(function () {
+    while (Piéton == 2) {
+        basic.showLeds(`
+            # . . # .
+            # . # . #
+            # . # . #
+            # . # . #
+            # . . # .
+            `)
+        basic.pause(400)
+        basic.showNumber(9)
+        basic.pause(400)
+        basic.showNumber(8)
+        basic.pause(400)
+        basic.showNumber(7)
+        basic.pause(400)
+        basic.showNumber(6)
+        basic.pause(400)
+        basic.showNumber(5)
+        basic.pause(400)
+        basic.showNumber(4)
+        basic.pause(400)
+        basic.showNumber(3)
+        basic.pause(400)
+        basic.showNumber(2)
+        basic.pause(400)
+        basic.showNumber(1)
+        basic.pause(350)
+        basic.clearScreen()
     }
 })
