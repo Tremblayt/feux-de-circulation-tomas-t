@@ -72,7 +72,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    while (Piéton == 2) {
+    if (Piéton == 2) {
         basic.showLeds(`
             # . . # .
             # . # . #
@@ -90,15 +90,17 @@ basic.forever(function () {
         basic.showNumber(6)
         basic.pause(400)
         basic.showNumber(5)
-        basic.pause(400)
+        basic.pause(350)
         basic.showNumber(4)
-        basic.pause(400)
+        basic.pause(350)
         basic.showNumber(3)
-        basic.pause(400)
+        basic.pause(350)
         basic.showNumber(2)
-        basic.pause(400)
+        basic.pause(350)
         basic.showNumber(1)
         basic.pause(350)
         basic.clearScreen()
+    } else {
+        basic.showNumber(0)
     }
 })
